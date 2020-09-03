@@ -1,0 +1,755 @@
+Microsoft Windows [Version 10.0.17763.1217]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\eaakaka>msinfo32
+
+C:\Users\eaakaka>cd Desktop
+
+C:\Users\eaakaka\Desktop>dir
+ Volume in drive C is OSDisk
+ Volume Serial Number is 2210-500F
+
+ Directory of C:\Users\eaakaka\Desktop
+
+07/21/2020  11:04 AM    <DIR>          .
+07/21/2020  11:04 AM    <DIR>          ..
+12/20/2019  10:05 AM    <DIR>          .ipynb_checkpoints
+04/03/2020  04:40 PM             2,201 Atom.lnk
+06/10/2020  05:42 PM    <DIR>          AWS
+04/03/2020  03:03 PM               776 Daily activity.txt
+12/09/2019  01:40 PM             2,485 Google Chrome.lnk
+04/19/2020  08:21 PM               815 gretl.lnk
+05/25/2020  11:35 PM    <DIR>          jenkinsDownload
+07/20/2020  09:39 AM    <DIR>          kube_code
+06/06/2020  03:33 PM             2,380 Microsoft Teams.lnk
+06/23/2020  12:05 AM    <DIR>          mlops-ws
+05/13/2020  04:28 PM    <DIR>          mycode
+05/10/2020  11:48 PM    <DIR>          myweb
+05/10/2020  11:51 PM    <DIR>          myweb1
+05/10/2020  11:51 PM    <DIR>          myweb2
+12/18/2019  12:15 PM               984 PDF Password Remover v3.1.lnk
+07/03/2020  01:10 AM           172,568 Pending Task_270117.txt
+05/25/2020  12:29 AM             1,027 PSPad.lnk
+03/29/2020  04:42 PM    <DIR>          Python
+02/17/2020  06:20 PM           558,141 Signoff_ 2019 cases_17022020.pdf
+04/03/2020  07:09 PM             1,044 Telegram.lnk
+06/24/2020  07:30 PM    <DIR>          unittesting
+05/04/2020  12:26 AM    <DIR>          web-jenkins
+12/09/2019  01:51 PM           836,521 Win 10 - Erica Certificate Installation.docx
+05/05/2020  04:30 PM    <DIR>          zzzz
+              11 File(s)      1,578,942 bytes
+              15 Dir(s)  19,492,696,064 bytes free
+
+C:\Users\eaakaka\Desktop>cd kube_code
+
+C:\Users\eaakaka\Desktop\kube_code>dir
+ Volume in drive C is OSDisk
+ Volume Serial Number is 2210-500F
+
+ Directory of C:\Users\eaakaka\Desktop\kube_code
+
+07/20/2020  09:39 AM    <DIR>          .
+07/20/2020  09:39 AM    <DIR>          ..
+07/21/2020  11:21 AM    <DIR>          cloudtask2
+05/22/2020  06:06 PM               104 db-secret.yml
+05/22/2020  03:32 PM               426 deploy.yml
+07/20/2020  09:40 AM    <DIR>          eks_class_code
+05/20/2020  01:40 PM               206 kustomization.yaml
+05/24/2020  01:00 PM             1,238 mysql-deployment.yaml
+05/22/2020  06:01 PM               375 pod-mysql.yml
+05/18/2020  04:19 PM               169 pod1 - bkp.yml
+05/16/2020  05:32 PM               124 pod1.txt
+05/22/2020  05:31 PM               358 pod1.yml
+05/23/2020  08:24 PM               164 podsvc.yml
+05/19/2020  04:17 PM               300 rc1.yml
+05/21/2020  04:58 PM               396 rs1 - bkp.yml
+05/21/2020  06:16 PM               423 rs1.yml
+05/23/2020  07:25 PM                 0 svc.txt
+05/23/2020  08:41 PM               224 svc.yml
+05/24/2020  01:14 PM    <DIR>          Vimal Drive
+05/22/2020  04:56 PM               195 web-pvc.yml
+05/24/2020  12:59 PM             1,332 wordpress-deployment.yaml
+05/24/2020  12:35 PM    <DIR>          wordpressbkpyaml file_AK
+              16 File(s)          6,034 bytes
+               6 Dir(s)  19,492,696,064 bytes free
+
+C:\Users\eaakaka\Desktop\kube_code>cd cloudtask2
+
+C:\Users\eaakaka\Desktop\kube_code\cloudtask2>dir
+ Volume in drive C is OSDisk
+ Volume Serial Number is 2210-500F
+
+ Directory of C:\Users\eaakaka\Desktop\kube_code\cloudtask2
+
+07/21/2020  11:21 AM    <DIR>          .
+07/21/2020  11:21 AM    <DIR>          ..
+07/20/2020  09:40 AM    <DIR>          .terraform
+07/21/2020  11:19 AM                18 publicip.txt
+07/21/2020  11:10 AM             6,743 task2.tf
+07/21/2020  11:21 AM               158 terraform.tfstate
+07/21/2020  11:20 AM            22,962 terraform.tfstate.backup
+               4 File(s)         29,881 bytes
+               3 Dir(s)  19,491,094,528 bytes free
+
+C:\Users\eaakaka\Desktop\kube_code\cloudtask2>terraform validate
+Success! The configuration is valid.
+
+
+C:\Users\eaakaka\Desktop\kube_code\cloudtask2>notepad task2.tf
+
+C:\Users\eaakaka\Desktop\kube_code\cloudtask2>terraform apply -auto-approve
+tls_private_key.privatekey: Creating...
+tls_private_key.privatekey: Creation complete after 0s [id=bc44460098c346fafc8f17040b28e0ab4392f94f]
+local_file.key_pair: Creating...
+local_file.key_pair: Creation complete after 0s [id=f50194e7d0c85a01563fd3611c717850ced60d92]
+aws_cloudfront_origin_access_identity.origin_access_identity: Creating...
+aws_key_pair.publickey: Creating...
+aws_efs_file_system.efs: Creating...
+aws_vpc.myvpc: Creating...
+aws_key_pair.publickey: Creation complete after 0s [id=key2a]
+aws_vpc.myvpc: Creation complete after 2s [id=vpc-0f167a7627594e5b5]
+aws_internet_gateway.IGW: Creating...
+aws_subnet.subnet1a: Creating...
+aws_security_group.sg: Creating...
+aws_cloudfront_origin_access_identity.origin_access_identity: Creation complete after 2s [id=EM5EO124F39ZN]
+aws_subnet.subnet1a: Creation complete after 1s [id=subnet-0c62d54cee2438233]
+aws_internet_gateway.IGW: Creation complete after 1s [id=igw-0896b472aa8b08fff]
+aws_route_table.igwrt: Creating...
+aws_route_table.igwrt: Creation complete after 1s [id=rtb-051912c299a1daf89]
+aws_route_table_association.rtassociation: Creating...
+aws_security_group.sg: Creation complete after 2s [id=sg-04be4e2ca6ea78515]
+aws_route_table_association.rtassociation: Creation complete after 0s [id=rtbassoc-01f3e41e9e0f80d23]
+aws_efs_file_system.efs: Creation complete after 6s [id=fs-3b5ec9ea]
+aws_efs_mount_target.efsmount: Creating...
+aws_efs_mount_target.efsmount: Still creating... [10s elapsed]
+aws_efs_mount_target.efsmount: Still creating... [20s elapsed]
+aws_efs_mount_target.efsmount: Still creating... [30s elapsed]
+aws_efs_mount_target.efsmount: Still creating... [40s elapsed]
+aws_efs_mount_target.efsmount: Still creating... [50s elapsed]
+aws_efs_mount_target.efsmount: Still creating... [1m0s elapsed]
+aws_efs_mount_target.efsmount: Still creating... [1m10s elapsed]
+aws_efs_mount_target.efsmount: Still creating... [1m20s elapsed]
+aws_efs_mount_target.efsmount: Creation complete after 1m24s [id=fsmt-cec2121f]
+aws_instance.myos: Creating...
+aws_s3_bucket.task-buck2: Creating...
+aws_s3_bucket.task-buck2: Creation complete after 4s [id=task-buck2]
+aws_s3_bucket_object.obj: Creating...
+aws_s3_bucket_object.obj: Creation complete after 1s [id=image.jpg]
+aws_instance.myos: Still creating... [10s elapsed]
+aws_instance.myos: Still creating... [20s elapsed]
+aws_instance.myos: Provisioning with 'remote-exec'...
+aws_instance.myos (remote-exec): Connecting to remote host via SSH...
+aws_instance.myos (remote-exec):   Host: 13.233.129.20
+aws_instance.myos (remote-exec):   User: ec2-user
+aws_instance.myos (remote-exec):   Password: false
+aws_instance.myos (remote-exec):   Private key: true
+aws_instance.myos (remote-exec):   Certificate: false
+aws_instance.myos (remote-exec):   SSH Agent: false
+aws_instance.myos (remote-exec):   Checking Host Key: false
+aws_instance.myos: Still creating... [30s elapsed]
+aws_instance.myos (remote-exec): Connected!
+aws_instance.myos (remote-exec): Loaded plugins: extras_suggestions,
+aws_instance.myos (remote-exec):               : langpacks, priorities,
+aws_instance.myos (remote-exec):               : update-motd
+aws_instance.myos (remote-exec): Existing lock /var/run/yum.pid: another copy is running as pid 3312.
+aws_instance.myos (remote-exec): Another app is currently holding the yum lock; waiting for it to exit...
+aws_instance.myos (remote-exec):   The other application is: yum
+aws_instance.myos (remote-exec):     Memory :  89 M RSS (380 MB VSZ)
+aws_instance.myos (remote-exec):     Started: Thu Jul 23 03:26:49 2020 - 00:05 ago
+aws_instance.myos (remote-exec):     State  : Running, pid: 3312
+aws_instance.myos (remote-exec): Another app is currently holding the yum lock; waiting for it to exit...
+aws_instance.myos (remote-exec):   The other application is: yum
+aws_instance.myos (remote-exec):     Memory : 118 M RSS (409 MB VSZ)
+aws_instance.myos (remote-exec):     Started: Thu Jul 23 03:26:49 2020 - 00:07 ago
+aws_instance.myos (remote-exec):     State  : Running, pid: 3312
+aws_instance.myos (remote-exec): Existing lock /var/run/yum.pid: another copy is running as pid 3382.
+aws_instance.myos (remote-exec): Another app is currently holding the yum lock; waiting for it to exit...
+aws_instance.myos (remote-exec):   The other application is: yum
+aws_instance.myos (remote-exec):     Memory :  82 M RSS (301 MB VSZ)
+aws_instance.myos (remote-exec):     Started: Thu Jul 23 03:26:49 2020 - 00:09 ago
+aws_instance.myos (remote-exec):     State  : Running, pid: 3382
+aws_instance.myos: Still creating... [40s elapsed]
+aws_instance.myos (remote-exec): Another app is currently holding the yum lock; waiting for it to exit...
+aws_instance.myos (remote-exec):   The other application is: yum
+aws_instance.myos (remote-exec):     Memory :  89 M RSS (323 MB VSZ)
+aws_instance.myos (remote-exec):     Started: Thu Jul 23 03:26:49 2020 - 00:11 ago
+aws_instance.myos (remote-exec):     State  : Running, pid: 3382
+aws_instance.myos (remote-exec): Existing lock /var/run/yum.pid: another copy is running as pid 3512.
+aws_instance.myos (remote-exec): Another app is currently holding the yum lock; waiting for it to exit...
+aws_instance.myos (remote-exec):   The other application is: yum
+aws_instance.myos (remote-exec):     Memory :  84 M RSS (300 MB VSZ)
+aws_instance.myos (remote-exec):     Started: Thu Jul 23 03:27:00 2020 - 00:02 ago
+aws_instance.myos (remote-exec):     State  : Running, pid: 3512
+aws_instance.myos (remote-exec): Another app is currently holding the yum lock; waiting for it to exit...
+aws_instance.myos (remote-exec):   The other application is: yum
+aws_instance.myos (remote-exec):     Memory : 117 M RSS (334 MB VSZ)
+aws_instance.myos (remote-exec):     Started: Thu Jul 23 03:27:00 2020 - 00:04 ago
+aws_instance.myos (remote-exec):     State  : Running, pid: 3512
+aws_instance.myos (remote-exec): Resolving Dependencies
+aws_instance.myos (remote-exec): --> Running transaction check
+aws_instance.myos (remote-exec): ---> Package git.x86_64 0:2.23.3-1.amzn2.0.1 will be installed
+aws_instance.myos (remote-exec): --> Processing Dependency: perl-Git = 2.23.3-1.amzn2.0.1 for package: git-2.23.3-1.amzn2.0.1.x86_64
+aws_instance.myos (remote-exec): --> Processing Dependency: git-core-doc = 2.23.3-1.amzn2.0.1 for package: git-2.23.3-1.amzn2.0.1.x86_64
+aws_instance.myos (remote-exec): --> Processing Dependency: git-core = 2.23.3-1.amzn2.0.1 for package: git-2.23.3-1.amzn2.0.1.x86_64
+aws_instance.myos (remote-exec): --> Processing Dependency: emacs-filesystem >= 25.3 for package: git-2.23.3-1.amzn2.0.1.x86_64
+aws_instance.myos (remote-exec): --> Processing Dependency: perl(Term::ReadKey) for package: git-2.23.3-1.amzn2.0.1.x86_64
+aws_instance.myos (remote-exec): --> Processing Dependency: perl(Git::I18N) for package: git-2.23.3-1.amzn2.0.1.x86_64
+aws_instance.myos (remote-exec): --> Processing Dependency: perl(Git) for package: git-2.23.3-1.amzn2.0.1.x86_64
+aws_instance.myos (remote-exec): --> Processing Dependency: libsecret-1.so.0()(64bit) for package: git-2.23.3-1.amzn2.0.1.x86_64
+aws_instance.myos (remote-exec): ---> Package httpd.x86_64 0:2.4.43-1.amzn2 will be installed
+aws_instance.myos (remote-exec): --> Processing Dependency: httpd-tools = 2.4.43-1.amzn2 for package: httpd-2.4.43-1.amzn2.x86_64
+aws_instance.myos (remote-exec): --> Processing Dependency: httpd-filesystem = 2.4.43-1.amzn2 for package: httpd-2.4.43-1.amzn2.x86_64
+aws_instance.myos (remote-exec): --> Processing Dependency: system-logos-httpd for package: httpd-2.4.43-1.amzn2.x86_64
+aws_instance.myos (remote-exec): --> Processing Dependency: mod_http2 for package: httpd-2.4.43-1.amzn2.x86_64
+aws_instance.myos (remote-exec): --> Processing Dependency: httpd-filesystem for package: httpd-2.4.43-1.amzn2.x86_64
+aws_instance.myos (remote-exec): --> Processing Dependency: /etc/mime.types for package: httpd-2.4.43-1.amzn2.x86_64
+aws_instance.myos (remote-exec): --> Processing Dependency: libaprutil-1.so.0()(64bit) for package: httpd-2.4.43-1.amzn2.x86_64
+aws_instance.myos (remote-exec): --> Processing Dependency: libapr-1.so.0()(64bit) for package: httpd-2.4.43-1.amzn2.x86_64
+aws_instance.myos (remote-exec): ---> Package php.x86_64 0:5.4.16-46.amzn2.0.2 will be installed
+aws_instance.myos (remote-exec): --> Processing Dependency: php-cli(x86-64) = 5.4.16-46.amzn2.0.2 for package: php-5.4.16-46.amzn2.0.2.x86_64
+aws_instance.myos (remote-exec): --> Processing Dependency: php-common(x86-64) = 5.4.16-46.amzn2.0.2 for package: php-5.4.16-46.amzn2.0.2.x86_64
+aws_instance.myos (remote-exec): --> Running transaction check
+aws_instance.myos (remote-exec): ---> Package apr.x86_64 0:1.6.3-5.amzn2.0.2 will be installed
+aws_instance.myos (remote-exec): ---> Package apr-util.x86_64 0:1.6.1-5.amzn2.0.2 will be installed
+aws_instance.myos (remote-exec): --> Processing Dependency: apr-util-bdb(x86-64) = 1.6.1-5.amzn2.0.2 for package: apr-util-1.6.1-5.amzn2.0.2.x86_64
+aws_instance.myos (remote-exec): ---> Package emacs-filesystem.noarch 1:25.3-3.amzn2.0.1 will be installed
+aws_instance.myos (remote-exec): ---> Package generic-logos-httpd.noarch 0:18.0.0-4.amzn2 will be installed
+aws_instance.myos (remote-exec): ---> Package git-core.x86_64 0:2.23.3-1.amzn2.0.1 will be installed
+aws_instance.myos (remote-exec): ---> Package git-core-doc.noarch 0:2.23.3-1.amzn2.0.1 will be installed
+aws_instance.myos (remote-exec): ---> Package httpd-filesystem.noarch 0:2.4.43-1.amzn2 will be installed
+aws_instance.myos (remote-exec): ---> Package httpd-tools.x86_64 0:2.4.43-1.amzn2 will be installed
+aws_instance.myos (remote-exec): ---> Package libsecret.x86_64 0:0.18.5-2.amzn2.0.2 will be installed
+aws_instance.myos (remote-exec): ---> Package mailcap.noarch 0:2.1.41-2.amzn2 will be installed
+aws_instance.myos (remote-exec): ---> Package mod_http2.x86_64 0:1.15.3-2.amzn2 will be installed
+aws_instance.myos (remote-exec): ---> Package perl-Git.noarch 0:2.23.3-1.amzn2.0.1 will be installed
+aws_instance.myos (remote-exec): --> Processing Dependency: perl(Error) for package: perl-Git-2.23.3-1.amzn2.0.1.noarch
+aws_instance.myos (remote-exec): ---> Package perl-TermReadKey.x86_64 0:2.30-20.amzn2.0.2 will be installed
+aws_instance.myos (remote-exec): ---> Package php-cli.x86_64 0:5.4.16-46.amzn2.0.2 will be installed
+aws_instance.myos (remote-exec): ---> Package php-common.x86_64 0:5.4.16-46.amzn2.0.2 will be installed
+aws_instance.myos (remote-exec): --> Processing Dependency: libzip.so.2()(64bit) for package: php-common-5.4.16-46.amzn2.0.2.x86_64
+aws_instance.myos (remote-exec): --> Running transaction check
+aws_instance.myos (remote-exec): ---> Package apr-util-bdb.x86_64 0:1.6.1-5.amzn2.0.2 will be installed
+aws_instance.myos (remote-exec): ---> Package libzip010-compat.x86_64 0:0.10.1-9.amzn2.0.5 will be installed
+aws_instance.myos (remote-exec): ---> Package perl-Error.noarch 1:0.17020-2.amzn2 will be installed
+aws_instance.myos (remote-exec): --> Finished Dependency Resolution
+
+aws_instance.myos (remote-exec): Dependencies Resolved
+
+aws_instance.myos (remote-exec): ========================================
+aws_instance.myos (remote-exec):  Package      Arch   Version
+aws_instance.myos (remote-exec):                        Repository  Size
+aws_instance.myos (remote-exec): ========================================
+aws_instance.myos (remote-exec): Installing:
+aws_instance.myos (remote-exec):  git          x86_64 2.23.3-1.amzn2.0.1
+aws_instance.myos (remote-exec):                        amzn2-core 135 k
+aws_instance.myos (remote-exec):  httpd        x86_64 2.4.43-1.amzn2
+aws_instance.myos (remote-exec):                        amzn2-core 1.3 M
+aws_instance.myos (remote-exec):  php          x86_64 5.4.16-46.amzn2.0.2
+aws_instance.myos (remote-exec):                        amzn2-core 1.4 M
+aws_instance.myos (remote-exec): Installing for dependencies:
+aws_instance.myos (remote-exec):  apr          x86_64 1.6.3-5.amzn2.0.2
+aws_instance.myos (remote-exec):                        amzn2-core 118 k
+aws_instance.myos (remote-exec):  apr-util     x86_64 1.6.1-5.amzn2.0.2
+aws_instance.myos (remote-exec):                        amzn2-core  99 k
+aws_instance.myos (remote-exec):  apr-util-bdb x86_64 1.6.1-5.amzn2.0.2
+aws_instance.myos (remote-exec):                        amzn2-core  19 k
+aws_instance.myos (remote-exec):  emacs-filesystem
+aws_instance.myos (remote-exec):               noarch 1:25.3-3.amzn2.0.1
+aws_instance.myos (remote-exec):                        amzn2-core  64 k
+aws_instance.myos (remote-exec):  generic-logos-httpd
+aws_instance.myos (remote-exec):               noarch 18.0.0-4.amzn2
+aws_instance.myos (remote-exec):                        amzn2-core  19 k
+aws_instance.myos (remote-exec):  git-core     x86_64 2.23.3-1.amzn2.0.1
+aws_instance.myos (remote-exec):                        amzn2-core 5.0 M
+aws_instance.myos (remote-exec):  git-core-doc noarch 2.23.3-1.amzn2.0.1
+aws_instance.myos (remote-exec):                        amzn2-core 2.4 M
+aws_instance.myos (remote-exec):  httpd-filesystem
+aws_instance.myos (remote-exec):               noarch 2.4.43-1.amzn2
+aws_instance.myos (remote-exec):                        amzn2-core  23 k
+aws_instance.myos (remote-exec):  httpd-tools  x86_64 2.4.43-1.amzn2
+aws_instance.myos (remote-exec):                        amzn2-core  87 k
+aws_instance.myos (remote-exec):  libsecret    x86_64 0.18.5-2.amzn2.0.2
+aws_instance.myos (remote-exec):                        amzn2-core 153 k
+aws_instance.myos (remote-exec):  libzip010-compat
+aws_instance.myos (remote-exec):               x86_64 0.10.1-9.amzn2.0.5
+aws_instance.myos (remote-exec):                        amzn2-core  30 k
+aws_instance.myos (remote-exec):  mailcap      noarch 2.1.41-2.amzn2
+aws_instance.myos (remote-exec):                        amzn2-core  31 k
+aws_instance.myos (remote-exec):  mod_http2    x86_64 1.15.3-2.amzn2
+aws_instance.myos (remote-exec):                        amzn2-core 146 k
+aws_instance.myos (remote-exec):  perl-Error   noarch 1:0.17020-2.amzn2
+aws_instance.myos (remote-exec):                        amzn2-core  32 k
+aws_instance.myos (remote-exec):  perl-Git     noarch 2.23.3-1.amzn2.0.1
+aws_instance.myos (remote-exec):                        amzn2-core  47 k
+aws_instance.myos (remote-exec):  perl-TermReadKey
+aws_instance.myos (remote-exec):               x86_64 2.30-20.amzn2.0.2
+aws_instance.myos (remote-exec):                        amzn2-core  31 k
+aws_instance.myos (remote-exec):  php-cli      x86_64 5.4.16-46.amzn2.0.2
+aws_instance.myos (remote-exec):                        amzn2-core 2.8 M
+aws_instance.myos (remote-exec):  php-common   x86_64 5.4.16-46.amzn2.0.2
+aws_instance.myos (remote-exec):                        amzn2-core 563 k
+
+aws_instance.myos (remote-exec): Transaction Summary
+aws_instance.myos (remote-exec): ========================================
+aws_instance.myos (remote-exec): Install  3 Packages (+18 Dependent packages)
+
+aws_instance.myos (remote-exec): Total download size: 14 M
+aws_instance.myos (remote-exec): Installed size: 63 M
+aws_instance.myos (remote-exec): Downloading packages:
+aws_instance.myos (remote-exec): (1/21): apr-1.6.3- | 118 kB   00:00
+aws_instance.myos (remote-exec): (2/21): apr-util-1 |  99 kB   00:00
+aws_instance.myos (remote-exec): (3/21): apr-util-b |  19 kB   00:00
+aws_instance.myos (remote-exec): (4/21): emacs-file |  64 kB   00:00
+aws_instance.myos (remote-exec): (5/21): generic-lo |  19 kB   00:00
+aws_instance.myos (remote-exec): (6/21): git-2.23.3 | 135 kB   00:00
+aws_instance.myos (remote-exec): (7/21): git-core-d | 2.4 MB   00:00
+aws_instance.myos (remote-exec): (8/21): git-core-2 | 5.0 MB   00:00
+aws_instance.myos (remote-exec): (9/21): httpd-2.4. | 1.3 MB   00:00
+aws_instance.myos (remote-exec): (10/21): httpd-fil |  23 kB   00:00
+aws_instance.myos (remote-exec): (11/21): httpd-too |  87 kB   00:00
+aws_instance.myos (remote-exec): (12/21): libsecret | 153 kB   00:00
+aws_instance.myos (remote-exec): (13/21): libzip010 |  30 kB   00:00
+aws_instance.myos (remote-exec): (14/21): mailcap-2 |  31 kB   00:00
+aws_instance.myos (remote-exec): (15/21): mod_http2 | 146 kB   00:00
+aws_instance.myos (remote-exec): (16/21): perl-Erro |  32 kB   00:00
+aws_instance.myos (remote-exec): (17/21): perl-Term |  31 kB   00:00
+aws_instance.myos (remote-exec): (18/21): perl-Git- |  47 kB   00:00
+aws_instance.myos (remote-exec): (19/21): php-5.4.1 | 1.4 MB   00:00
+aws_instance.myos (remote-exec): (20/21): php-cli-5 | 2.8 MB   00:00
+aws_instance.myos (remote-exec): (21/21): php-commo | 563 kB   00:00
+aws_instance.myos (remote-exec): ----------------------------------------
+aws_instance.myos (remote-exec): Total       38 MB/s |  14 MB  00:00
+aws_instance.myos (remote-exec): Running transaction check
+aws_instance.myos (remote-exec): Running transaction test
+aws_instance.myos (remote-exec): Transaction test succeeded
+aws_instance.myos (remote-exec): Running transaction
+aws_instance.myos (remote-exec):   Installing : apr-1.6 [        ]  1/21
+aws_instance.myos (remote-exec):   Installing : apr-1.6 [##      ]  1/21
+aws_instance.myos (remote-exec):   Installing : apr-1.6 [####    ]  1/21
+aws_instance.myos (remote-exec):   Installing : apr-1.6 [######  ]  1/21
+aws_instance.myos (remote-exec):   Installing : apr-1.6 [####### ]  1/21
+aws_instance.myos (remote-exec):   Installing : apr-1.6.3-5.amzn    1/21
+aws_instance.myos (remote-exec):   Installing : apr-uti [        ]  2/21
+aws_instance.myos (remote-exec):   Installing : apr-uti [##      ]  2/21
+aws_instance.myos (remote-exec):   Installing : apr-uti [####    ]  2/21
+aws_instance.myos (remote-exec):   Installing : apr-uti [######  ]  2/21
+aws_instance.myos (remote-exec):   Installing : apr-uti [####### ]  2/21
+aws_instance.myos (remote-exec):   Installing : apr-util-1.6.1-5    2/21
+aws_instance.myos (remote-exec):   Installing : apr-uti [        ]  3/21
+aws_instance.myos (remote-exec):   Installing : apr-uti [####### ]  3/21
+aws_instance.myos (remote-exec):   Installing : apr-util-bdb-1.6    3/21
+aws_instance.myos (remote-exec):   Installing : git-cor [        ]  4/21
+aws_instance.myos (remote-exec):   Installing : git-cor [#       ]  4/21
+aws_instance.myos (remote-exec):   Installing : git-cor [##      ]  4/21
+aws_instance.myos (remote-exec):   Installing : git-cor [###     ]  4/21
+aws_instance.myos (remote-exec):   Installing : git-cor [####    ]  4/21
+aws_instance.myos (remote-exec):   Installing : git-cor [#####   ]  4/21
+aws_instance.myos (remote-exec):   Installing : git-cor [######  ]  4/21
+aws_instance.myos (remote-exec):   Installing : git-cor [####### ]  4/21
+aws_instance.myos (remote-exec):   Installing : git-core-2.23.3-    4/21
+aws_instance.myos (remote-exec):   Installing : git-cor [        ]  5/21
+aws_instance.myos (remote-exec):   Installing : git-cor [#       ]  5/21
+aws_instance.myos (remote-exec):   Installing : git-cor [##      ]  5/21
+aws_instance.myos (remote-exec):   Installing : git-cor [###     ]  5/21
+aws_instance.myos (remote-exec):   Installing : git-cor [####    ]  5/21
+aws_instance.myos (remote-exec):   Installing : git-cor [#####   ]  5/21
+aws_instance.myos (remote-exec):   Installing : git-cor [######  ]  5/21
+aws_instance.myos (remote-exec):   Installing : git-cor [####### ]  5/21
+aws_instance.myos (remote-exec):   Installing : git-core-doc-2.2    5/21
+aws_instance.myos (remote-exec):   Installing : httpd-t [        ]  6/21
+aws_instance.myos (remote-exec):   Installing : httpd-t [##      ]  6/21
+aws_instance.myos (remote-exec):   Installing : httpd-t [###     ]  6/21
+aws_instance.myos (remote-exec):   Installing : httpd-t [####    ]  6/21
+aws_instance.myos (remote-exec):   Installing : httpd-t [#####   ]  6/21
+aws_instance.myos (remote-exec):   Installing : httpd-t [######  ]  6/21
+aws_instance.myos (remote-exec):   Installing : httpd-t [####### ]  6/21
+aws_instance.myos (remote-exec):   Installing : httpd-tools-2.4.    6/21
+aws_instance.myos (remote-exec):   Installing : generic [        ]  7/21
+aws_instance.myos (remote-exec):   Installing : generic [######  ]  7/21
+aws_instance.myos (remote-exec):   Installing : generic [####### ]  7/21
+aws_instance.myos (remote-exec):   Installing : generic-logos-ht    7/21
+aws_instance.myos (remote-exec):   Installing : mailcap [        ]  8/21
+aws_instance.myos (remote-exec):   Installing : mailcap [######  ]  8/21
+aws_instance.myos (remote-exec):   Installing : mailcap [####### ]  8/21
+aws_instance.myos (remote-exec):   Installing : mailcap-2.1.41-2    8/21
+aws_instance.myos (remote-exec):   Installing : httpd-f [        ]  9/21
+aws_instance.myos (remote-exec):   Installing : httpd-f [#       ]  9/21
+aws_instance.myos (remote-exec):   Installing : httpd-f [###     ]  9/21
+aws_instance.myos (remote-exec):   Installing : httpd-f [####    ]  9/21
+aws_instance.myos (remote-exec):   Installing : httpd-f [#####   ]  9/21
+aws_instance.myos (remote-exec):   Installing : httpd-f [######  ]  9/21
+aws_instance.myos (remote-exec):   Installing : httpd-f [####### ]  9/21
+aws_instance.myos (remote-exec):   Installing : httpd-filesystem    9/21
+aws_instance.myos (remote-exec):   Installing : mod_htt [        ] 10/21
+aws_instance.myos (remote-exec):   Installing : mod_htt [#       ] 10/21
+aws_instance.myos (remote-exec):   Installing : mod_htt [##      ] 10/21
+aws_instance.myos (remote-exec):   Installing : mod_htt [####    ] 10/21
+aws_instance.myos (remote-exec):   Installing : mod_htt [#####   ] 10/21
+aws_instance.myos (remote-exec):   Installing : mod_htt [######  ] 10/21
+aws_instance.myos (remote-exec):   Installing : mod_htt [####### ] 10/21
+aws_instance.myos (remote-exec):   Installing : mod_http2-1.15.3   10/21
+aws_instance.myos: Still creating... [50s elapsed]
+aws_instance.myos (remote-exec):   Installing : httpd-2 [        ] 11/21
+aws_instance.myos (remote-exec):   Installing : httpd-2 [#       ] 11/21
+aws_instance.myos (remote-exec):   Installing : httpd-2 [##      ] 11/21
+aws_instance.myos (remote-exec):   Installing : httpd-2 [###     ] 11/21
+aws_instance.myos (remote-exec):   Installing : httpd-2 [####    ] 11/21
+aws_instance.myos (remote-exec):   Installing : httpd-2 [#####   ] 11/21
+aws_instance.myos (remote-exec):   Installing : httpd-2 [######  ] 11/21
+aws_instance.myos (remote-exec):   Installing : httpd-2 [####### ] 11/21
+aws_instance.myos (remote-exec):   Installing : httpd-2.4.43-1.a   11/21
+aws_instance.myos (remote-exec):   Installing : 1:perl- [        ] 12/21
+aws_instance.myos (remote-exec):   Installing : 1:perl- [#       ] 12/21
+aws_instance.myos (remote-exec):   Installing : 1:perl- [##      ] 12/21
+aws_instance.myos (remote-exec):   Installing : 1:perl- [###     ] 12/21
+aws_instance.myos (remote-exec):   Installing : 1:perl- [####    ] 12/21
+aws_instance.myos (remote-exec):   Installing : 1:perl- [####### ] 12/21
+aws_instance.myos (remote-exec):   Installing : 1:perl-Error-0.1   12/21
+aws_instance.myos (remote-exec):   Installing : libzip0 [        ] 13/21
+aws_instance.myos (remote-exec):   Installing : libzip0 [####### ] 13/21
+aws_instance.myos (remote-exec):   Installing : libzip010-compat   13/21
+aws_instance.myos (remote-exec):   Installing : php-com [        ] 14/21
+aws_instance.myos (remote-exec):   Installing : php-com [#       ] 14/21
+aws_instance.myos (remote-exec):   Installing : php-com [##      ] 14/21
+aws_instance.myos (remote-exec):   Installing : php-com [###     ] 14/21
+aws_instance.myos (remote-exec):   Installing : php-com [####    ] 14/21
+aws_instance.myos (remote-exec):   Installing : php-com [#####   ] 14/21
+aws_instance.myos (remote-exec):   Installing : php-com [######  ] 14/21
+aws_instance.myos (remote-exec):   Installing : php-com [####### ] 14/21
+aws_instance.myos (remote-exec):   Installing : php-common-5.4.1   14/21
+aws_instance.myos (remote-exec):   Installing : php-cli [        ] 15/21
+aws_instance.myos (remote-exec):   Installing : php-cli [#       ] 15/21
+aws_instance.myos (remote-exec):   Installing : php-cli [##      ] 15/21
+aws_instance.myos (remote-exec):   Installing : php-cli [###     ] 15/21
+aws_instance.myos (remote-exec):   Installing : php-cli [####    ] 15/21
+aws_instance.myos (remote-exec):   Installing : php-cli [#####   ] 15/21
+aws_instance.myos (remote-exec):   Installing : php-cli [######  ] 15/21
+aws_instance.myos (remote-exec):   Installing : php-cli [####### ] 15/21
+aws_instance.myos (remote-exec):   Installing : php-cli-5.4.16-4   15/21
+aws_instance.myos (remote-exec):   Installing : perl-Te [        ] 16/21
+aws_instance.myos (remote-exec):   Installing : perl-Te [##      ] 16/21
+aws_instance.myos (remote-exec):   Installing : perl-Te [######  ] 16/21
+aws_instance.myos (remote-exec):   Installing : perl-Te [####### ] 16/21
+aws_instance.myos (remote-exec):   Installing : perl-TermReadKey   16/21
+aws_instance.myos (remote-exec):   Installing : libsecr [        ] 17/21
+aws_instance.myos (remote-exec):   Installing : libsecr [#       ] 17/21
+aws_instance.myos (remote-exec):   Installing : libsecr [##      ] 17/21
+aws_instance.myos (remote-exec):   Installing : libsecr [###     ] 17/21
+aws_instance.myos (remote-exec):   Installing : libsecr [####    ] 17/21
+aws_instance.myos (remote-exec):   Installing : libsecr [#####   ] 17/21
+aws_instance.myos (remote-exec):   Installing : libsecr [######  ] 17/21
+aws_instance.myos (remote-exec):   Installing : libsecr [####### ] 17/21
+aws_instance.myos (remote-exec):   Installing : libsecret-0.18.5   17/21
+aws_instance.myos (remote-exec):   Installing : 1:emacs [        ] 18/21
+aws_instance.myos (remote-exec):   Installing : 1:emacs [#       ] 18/21
+aws_instance.myos (remote-exec):   Installing : 1:emacs [###     ] 18/21
+aws_instance.myos (remote-exec):   Installing : 1:emacs [######  ] 18/21
+aws_instance.myos (remote-exec):   Installing : 1:emacs-filesyst   18/21
+aws_instance.myos (remote-exec):   Installing : perl-Gi [        ] 19/21
+aws_instance.myos (remote-exec):   Installing : perl-Gi [#       ] 19/21
+aws_instance.myos (remote-exec):   Installing : perl-Gi [####### ] 19/21
+aws_instance.myos (remote-exec):   Installing : perl-Git-2.23.3-   19/21
+aws_instance.myos (remote-exec):   Installing : git-2.2 [        ] 20/21
+aws_instance.myos (remote-exec):   Installing : git-2.2 [#       ] 20/21
+aws_instance.myos (remote-exec):   Installing : git-2.2 [##      ] 20/21
+aws_instance.myos (remote-exec):   Installing : git-2.2 [###     ] 20/21
+aws_instance.myos (remote-exec):   Installing : git-2.2 [####    ] 20/21
+aws_instance.myos (remote-exec):   Installing : git-2.2 [######  ] 20/21
+aws_instance.myos (remote-exec):   Installing : git-2.2 [####### ] 20/21
+aws_instance.myos (remote-exec):   Installing : git-2.23.3-1.amz   20/21
+aws_instance.myos (remote-exec):   Installing : php-5.4 [        ] 21/21
+aws_instance.myos (remote-exec):   Installing : php-5.4 [#       ] 21/21
+aws_instance.myos (remote-exec):   Installing : php-5.4 [##      ] 21/21
+aws_instance.myos (remote-exec):   Installing : php-5.4 [###     ] 21/21
+aws_instance.myos (remote-exec):   Installing : php-5.4 [####    ] 21/21
+aws_instance.myos (remote-exec):   Installing : php-5.4 [#####   ] 21/21
+aws_instance.myos (remote-exec):   Installing : php-5.4 [######  ] 21/21
+aws_instance.myos (remote-exec):   Installing : php-5.4 [####### ] 21/21
+aws_instance.myos (remote-exec):   Installing : php-5.4.16-46.am   21/21
+aws_instance.myos (remote-exec):   Verifying  : 1:emacs-filesyst    1/21
+aws_instance.myos (remote-exec):   Verifying  : git-2.23.3-1.amz    2/21
+aws_instance.myos (remote-exec):   Verifying  : apr-util-bdb-1.6    3/21
+aws_instance.myos (remote-exec):   Verifying  : php-cli-5.4.16-4    4/21
+aws_instance.myos (remote-exec):   Verifying  : libsecret-0.18.5    5/21
+aws_instance.myos (remote-exec):   Verifying  : perl-TermReadKey    6/21
+aws_instance.myos (remote-exec):   Verifying  : httpd-2.4.43-1.a    7/21
+aws_instance.myos (remote-exec):   Verifying  : mod_http2-1.15.3    8/21
+aws_instance.myos (remote-exec):   Verifying  : apr-1.6.3-5.amzn    9/21
+aws_instance.myos (remote-exec):   Verifying  : php-5.4.16-46.am   10/21
+aws_instance.myos (remote-exec):   Verifying  : libzip010-compat   11/21
+aws_instance.myos (remote-exec):   Verifying  : git-core-2.23.3-   12/21
+aws_instance.myos (remote-exec):   Verifying  : apr-util-1.6.1-5   13/21
+aws_instance.myos (remote-exec):   Verifying  : 1:perl-Error-0.1   14/21
+aws_instance.myos (remote-exec):   Verifying  : httpd-filesystem   15/21
+aws_instance.myos (remote-exec):   Verifying  : mailcap-2.1.41-2   16/21
+aws_instance.myos (remote-exec):   Verifying  : generic-logos-ht   17/21
+aws_instance.myos (remote-exec):   Verifying  : php-common-5.4.1   18/21
+aws_instance.myos (remote-exec):   Verifying  : perl-Git-2.23.3-   19/21
+aws_instance.myos (remote-exec):   Verifying  : git-core-doc-2.2   20/21
+aws_instance.myos (remote-exec):   Verifying  : httpd-tools-2.4.   21/21
+
+aws_instance.myos (remote-exec): Installed:
+aws_instance.myos (remote-exec):   git.x86_64 0:2.23.3-1.amzn2.0.1
+aws_instance.myos (remote-exec):   httpd.x86_64 0:2.4.43-1.amzn2
+aws_instance.myos (remote-exec):   php.x86_64 0:5.4.16-46.amzn2.0.2
+
+aws_instance.myos (remote-exec): Dependency Installed:
+aws_instance.myos (remote-exec):   apr.x86_64 0:1.6.3-5.amzn2.0.2
+aws_instance.myos (remote-exec):   apr-util.x86_64 0:1.6.1-5.amzn2.0.2
+aws_instance.myos (remote-exec):   apr-util-bdb.x86_64 0:1.6.1-5.amzn2.0.2
+aws_instance.myos (remote-exec):   emacs-filesystem.noarch 1:25.3-3.amzn2.0.1
+aws_instance.myos (remote-exec):   generic-logos-httpd.noarch 0:18.0.0-4.amzn2
+aws_instance.myos (remote-exec):   git-core.x86_64 0:2.23.3-1.amzn2.0.1
+aws_instance.myos (remote-exec):   git-core-doc.noarch 0:2.23.3-1.amzn2.0.1
+aws_instance.myos (remote-exec):   httpd-filesystem.noarch 0:2.4.43-1.amzn2
+aws_instance.myos (remote-exec):   httpd-tools.x86_64 0:2.4.43-1.amzn2
+aws_instance.myos (remote-exec):   libsecret.x86_64 0:0.18.5-2.amzn2.0.2
+aws_instance.myos (remote-exec):   libzip010-compat.x86_64 0:0.10.1-9.amzn2.0.5
+aws_instance.myos (remote-exec):   mailcap.noarch 0:2.1.41-2.amzn2
+aws_instance.myos (remote-exec):   mod_http2.x86_64 0:1.15.3-2.amzn2
+aws_instance.myos (remote-exec):   perl-Error.noarch 1:0.17020-2.amzn2
+aws_instance.myos (remote-exec):   perl-Git.noarch 0:2.23.3-1.amzn2.0.1
+aws_instance.myos (remote-exec):   perl-TermReadKey.x86_64 0:2.30-20.amzn2.0.2
+aws_instance.myos (remote-exec):   php-cli.x86_64 0:5.4.16-46.amzn2.0.2
+aws_instance.myos (remote-exec):   php-common.x86_64 0:5.4.16-46.amzn2.0.2
+
+aws_instance.myos (remote-exec): Complete!
+aws_instance.myos (remote-exec): Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service to /usr/lib/systemd/system/httpd.service.
+aws_instance.myos (remote-exec): Loaded plugins: extras_suggestions,
+aws_instance.myos (remote-exec):               : langpacks, priorities,
+aws_instance.myos (remote-exec):               : update-motd
+aws_instance.myos (remote-exec): Existing lock /var/run/yum.pid: another copy is running as pid 3619.
+aws_instance.myos (remote-exec): Another app is currently holding the yum lock; waiting for it to exit...
+aws_instance.myos (remote-exec):   The other application is: yum
+aws_instance.myos (remote-exec):     Memory :  41 M RSS (257 MB VSZ)
+aws_instance.myos (remote-exec):     Started: Thu Jul 23 03:27:10 2020 - 00:02 ago
+aws_instance.myos (remote-exec):     State  : Running, pid: 3619
+aws_instance.myos (remote-exec): Another app is currently holding the yum lock; waiting for it to exit...
+aws_instance.myos (remote-exec):   The other application is: yum
+aws_instance.myos (remote-exec):     Memory : 116 M RSS (333 MB VSZ)
+aws_instance.myos (remote-exec):     Started: Thu Jul 23 03:27:10 2020 - 00:04 ago
+aws_instance.myos (remote-exec):     State  : Running, pid: 3619
+aws_instance.myos (remote-exec): Resolving Dependencies
+aws_instance.myos (remote-exec): --> Running transaction check
+aws_instance.myos (remote-exec): ---> Package amazon-efs-utils.noarch 0:1.26-3.amzn2 will be installed
+aws_instance.myos (remote-exec): --> Processing Dependency: stunnel >= 4.56 for package: amazon-efs-utils-1.26-3.amzn2.noarch
+aws_instance.myos (remote-exec): --> Running transaction check
+aws_instance.myos (remote-exec): ---> Package stunnel.x86_64 0:4.56-6.amzn2.0.3 will be installed
+aws_instance.myos (remote-exec): --> Finished Dependency Resolution
+
+aws_instance.myos (remote-exec): Dependencies Resolved
+
+aws_instance.myos (remote-exec): ========================================
+aws_instance.myos (remote-exec):  Package
+aws_instance.myos (remote-exec):    Arch   Version      Repository  Size
+aws_instance.myos (remote-exec): ========================================
+aws_instance.myos (remote-exec): Installing:
+aws_instance.myos (remote-exec):  amazon-efs-utils
+aws_instance.myos (remote-exec):    noarch 1.26-3.amzn2 amzn2-core  33 k
+aws_instance.myos (remote-exec): Installing for dependencies:
+aws_instance.myos (remote-exec):  stunnel
+aws_instance.myos (remote-exec):    x86_64 4.56-6.amzn2.0.3
+aws_instance.myos (remote-exec):                        amzn2-core 149 k
+
+aws_instance.myos (remote-exec): Transaction Summary
+aws_instance.myos (remote-exec): ========================================
+aws_instance.myos (remote-exec): Install  1 Package (+1 Dependent package)
+
+aws_instance.myos (remote-exec): Total download size: 182 k
+aws_instance.myos (remote-exec): Installed size: 416 k
+aws_instance.myos (remote-exec): Downloading packages:
+aws_instance.myos (remote-exec): (1/2): amazon-efs- |  33 kB   00:00
+aws_instance.myos (remote-exec): (2/2): stunnel-4.5 | 149 kB   00:00
+aws_instance.myos (remote-exec): ----------------------------------------
+aws_instance.myos (remote-exec): Total      1.4 MB/s | 182 kB  00:00
+aws_instance.myos (remote-exec): Running transaction check
+aws_instance.myos (remote-exec): Running transaction test
+aws_instance.myos (remote-exec): Transaction test succeeded
+aws_instance.myos (remote-exec): Running transaction
+aws_instance.myos (remote-exec):   Installing : stunnel- [         ] 1/2
+aws_instance.myos (remote-exec):   Installing : stunnel- [#        ] 1/2
+aws_instance.myos (remote-exec):   Installing : stunnel- [###      ] 1/2
+aws_instance.myos (remote-exec):   Installing : stunnel- [####     ] 1/2
+aws_instance.myos (remote-exec):   Installing : stunnel- [######   ] 1/2
+aws_instance.myos (remote-exec):   Installing : stunnel- [#######  ] 1/2
+aws_instance.myos (remote-exec):   Installing : stunnel- [######## ] 1/2
+aws_instance.myos (remote-exec):   Installing : stunnel-4.56-6.amz   1/2
+aws_instance.myos (remote-exec):   Installing : amazon-e [         ] 2/2
+aws_instance.myos (remote-exec):   Installing : amazon-e [#####    ] 2/2
+aws_instance.myos (remote-exec):   Installing : amazon-e [######## ] 2/2
+aws_instance.myos (remote-exec):   Installing : amazon-efs-utils-1   2/2
+aws_instance.myos (remote-exec):   Verifying  : stunnel-4.56-6.amz   1/2
+aws_instance.myos (remote-exec):   Verifying  : amazon-efs-utils-1   2/2
+
+aws_instance.myos (remote-exec): Installed:
+aws_instance.myos (remote-exec):   amazon-efs-utils.noarch 0:1.26-3.amzn2
+
+aws_instance.myos (remote-exec): Dependency Installed:
+aws_instance.myos (remote-exec):   stunnel.x86_64 0:4.56-6.amzn2.0.3
+
+aws_instance.myos (remote-exec): Complete!
+aws_instance.myos (remote-exec): Loaded plugins: extras_suggestions,
+aws_instance.myos (remote-exec):               : langpacks, priorities,
+aws_instance.myos (remote-exec):               : update-motd
+aws_instance.myos (remote-exec): No package nfs-commonB available.
+aws_instance.myos (remote-exec): Error: Nothing to do
+aws_instance.myos (remote-exec): Loaded plugins: extras_suggestions,
+aws_instance.myos (remote-exec):               : langpacks, priorities,
+aws_instance.myos (remote-exec):               : update-motd
+aws_instance.myos (remote-exec): Package 1:nfs-utils-1.3.0-0.54.amzn2.0.2.x86_64 already installed and latest version
+aws_instance.myos (remote-exec): Nothing to do
+aws_instance.myos: Creation complete after 1m0s [id=i-0a8dbc489bfa2f6e8]
+null_resource.nulllocal2: Creating...
+null_resource.nulllocal2: Provisioning with 'local-exec'...
+null_resource.nulllocal2 (local-exec): Executing: ["cmd" "/C" "echo  13.233.129.20 > publicip.txt"]
+aws_cloudfront_distribution.task2-s3: Creating...
+null_resource.nulllocal2: Creation complete after 0s [id=8609037646836752726]
+aws_cloudfront_distribution.task2-s3: Still creating... [10s elapsed]
+aws_cloudfront_distribution.task2-s3: Still creating... [20s elapsed]
+aws_cloudfront_distribution.task2-s3: Still creating... [30s elapsed]
+aws_cloudfront_distribution.task2-s3: Still creating... [40s elapsed]
+aws_cloudfront_distribution.task2-s3: Still creating... [50s elapsed]
+aws_cloudfront_distribution.task2-s3: Still creating... [1m0s elapsed]
+aws_cloudfront_distribution.task2-s3: Still creating... [1m10s elapsed]
+aws_cloudfront_distribution.task2-s3: Still creating... [1m20s elapsed]
+aws_cloudfront_distribution.task2-s3: Still creating... [1m30s elapsed]
+aws_cloudfront_distribution.task2-s3: Still creating... [1m40s elapsed]
+aws_cloudfront_distribution.task2-s3: Still creating... [1m50s elapsed]
+aws_cloudfront_distribution.task2-s3: Still creating... [2m0s elapsed]
+aws_cloudfront_distribution.task2-s3: Still creating... [2m10s elapsed]
+aws_cloudfront_distribution.task2-s3: Still creating... [2m20s elapsed]
+aws_cloudfront_distribution.task2-s3: Still creating... [2m30s elapsed]
+aws_cloudfront_distribution.task2-s3: Still creating... [2m40s elapsed]
+aws_cloudfront_distribution.task2-s3: Provisioning with 'remote-exec'...
+aws_cloudfront_distribution.task2-s3 (remote-exec): Connecting to remote host via SSH...
+aws_cloudfront_distribution.task2-s3 (remote-exec):   Host: 13.233.129.20
+aws_cloudfront_distribution.task2-s3 (remote-exec):   User: ec2-user
+aws_cloudfront_distribution.task2-s3 (remote-exec):   Password: false
+aws_cloudfront_distribution.task2-s3 (remote-exec):   Private key: true
+aws_cloudfront_distribution.task2-s3 (remote-exec):   Certificate: false
+aws_cloudfront_distribution.task2-s3 (remote-exec):   SSH Agent: false
+aws_cloudfront_distribution.task2-s3 (remote-exec):   Checking Host Key: false
+aws_cloudfront_distribution.task2-s3 (remote-exec): Connected!
+aws_cloudfront_distribution.task2-s3 (remote-exec): mount: /var/www/html: can't find in /etc/fstab.
+aws_cloudfront_distribution.task2-s3 (remote-exec): Cloning into '/var/www/html'...
+aws_cloudfront_distribution.task2-s3: Still creating... [2m50s elapsed]
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Enumerating objects: 25, done.
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:   4% (1/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:   8% (2/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:  12% (3/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:  16% (4/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:  20% (5/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:  24% (6/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:  28% (7/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:  32% (8/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:  36% (9/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:  40% (10/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:  44% (11/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:  48% (12/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:  52% (13/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:  56% (14/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:  60% (15/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:  64% (16/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:  68% (17/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:  72% (18/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:  76% (19/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:  80% (20/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:  84% (21/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:  88% (22/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:  92% (23/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects:  96% (24/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects: 100% (25/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Counting objects: 100% (25/25), done.
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Compressing objects:   4% (1/21)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Compressing objects:   9% (2/21)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Compressing objects:  14% (3/21)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Compressing objects:  19% (4/21)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Compressing objects:  23% (5/21)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Compressing objects:  28% (6/21)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Compressing objects:  33% (7/21)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Compressing objects:  38% (8/21)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Compressing objects:  42% (9/21)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Compressing objects:  47% (10/21)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Compressing objects:  52% (11/21)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Compressing objects:  57% (12/21)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Compressing objects:  61% (13/21)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Compressing objects:  66% (14/21)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Compressing objects:  71% (15/21)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Compressing objects:  76% (16/21)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Compressing objects:  80% (17/21)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Compressing objects:  85% (18/21)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Compressing objects:  90% (19/21)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Compressing objects:  95% (20/21)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Compressing objects: 100% (21/21)
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Compressing objects: 100% (21/21), done.
+aws_cloudfront_distribution.task2-s3 (remote-exec): remote: Total 25 (delta 3), reused 15 (delta 0), pack-reused 0
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:   4% (1/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:   8% (2/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:  12% (3/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:  16% (4/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:  20% (5/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:  24% (6/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:  28% (7/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:  32% (8/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:  36% (9/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:  40% (10/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:  44% (11/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:  48% (12/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:  52% (13/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:  56% (14/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:  60% (15/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:  64% (16/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:  68% (17/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:  72% (18/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:  76% (19/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:  80% (20/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:  84% (21/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:  88% (22/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:  92% (23/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects:  96% (24/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects: 100% (25/25)
+aws_cloudfront_distribution.task2-s3 (remote-exec): Unpacking objects: 100% (25/25), done.
+aws_cloudfront_distribution.task2-s3 (remote-exec): Last login: Thu Jul 23 03:30:11 UTC 2020
+aws_cloudfront_distribution.task2-s3: Creation complete after 2m52s [id=E13T9FE4YBTT9E]
+null_resource.nulloc: Creating...
+null_resource.nulloc: Provisioning with 'local-exec'...
+null_resource.nulloc (local-exec): Executing: ["cmd" "/C" " start http://13.233.129.20"]
+null_resource.nulloc: Creation complete after 0s [id=1840872221733269164]
+
+Apply complete! Resources: 18 added, 0 changed, 0 destroyed.
+
+C:\Users\eaakaka\Desktop\kube_code\cloudtask2>notepad
+
+C:\Users\eaakaka\Desktop\kube_code\cloudtask2>notepad task2.tf
+
+C:\Users\eaakaka\Desktop\kube_code\cloudtask2>
+C:\Users\eaakaka\Desktop\kube_code\cloudtask2>terraform init
+
+Initializing the backend...
+
+Initializing provider plugins...
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, it is recommended to add version = "..." constraints to the
+corresponding provider blocks in configuration, with the constraint strings
+suggested below.
+
+* provider.aws: version = "~> 2.70"
+* provider.local: version = "~> 1.4"
+* provider.null: version = "~> 2.1"
+* provider.tls: version = "~> 2.1"
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+
+C:\Users\eaakaka\Desktop\kube_code\cloudtask2>
